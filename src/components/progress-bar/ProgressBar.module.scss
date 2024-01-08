@@ -1,0 +1,120 @@
+
+@import "@sass/variables";
+$barColor: #085A64;
+$maxWidth: 428px;
+$txtColor: #4B5563;
+$txtHighlightColor: #0D8390;
+
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: $maxWidth;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 24px 66px 0;
+    @media screen and (min-width: $bp-desktop) {
+        margin:  0 auto;
+        padding: 32px 0 0;
+    }    
+}
+
+.stages {
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+    position: relative;
+    width: 100%;
+}
+
+.stage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &:first-child {
+        transform: translateX(calc(-50% + 8px));
+    }
+
+    &:last-child {
+        transform: translateX(calc(+50% - 8px));
+    }
+
+}
+
+.stageIcon {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 4px solid #E5E7EB;
+    background-color: #9CA3AF;
+    flex-shrink: 0;
+
+}
+
+.stageIconActive {
+    border: 4px solid #0D8390;
+    background-color: #E5E7EB;
+}
+
+.stageIconCompleted {
+    border: none;
+    background-color: #0D8390;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    &:before {
+        content: '\f00c';
+        font-size: 8px;
+        font-family: "Font Awesome 6 Pro";
+        color: #E5E7EB;
+        font-weight: 900;
+    }
+}
+
+.stageName {
+    font-size: 14px;
+    font-weight: normal;
+    text-align: center;
+    line-height: 130%;
+    color: $txtColor;
+}
+
+.stageNameActive {
+    color: $txtHighlightColor;
+}
+
+.bars {
+    width: 100%;
+    max-width: $maxWidth;
+    display: flex;
+    align-items: center;
+}
+
+.bar {
+    background-color: #9CA3AF;
+    width: 50%;
+    height: 2px;
+    &__fill {
+        width: 0%;
+        height: 100%;
+        background-color: #0D8390;
+       
+    }
+}
+
+.fill {
+    &Entered {
+        width: 100%;
+        transition: width 1s;
+        transition-delay: 1s;
+    }
+
+    &Complete {
+        width: 100%;
+    }
+}

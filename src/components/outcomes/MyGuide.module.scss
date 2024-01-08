@@ -1,0 +1,136 @@
+
+
+@import "@sass/variables";
+@import "@sass/colors";
+
+.myGuide {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 40px 16px 0;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    @media screen and (min-width: $bp-desktop) {
+        align-items: stretch;
+        flex-direction: column;
+        justify-content: flex-start;
+        background-color: #F9FAFB;
+        padding: 40px 0 0;
+        gap: 0;
+    }
+
+    &__title {
+        border-bottom: #E5E7EB 1px solid;
+
+        &__text {
+            margin: 0;
+        }
+
+        @media screen and (min-width: $bp-desktop) {
+            padding: 16px 24px;
+        }
+    }
+
+    &__outcomes {
+        padding: 16px 0;
+        border-bottom: #E5E7EB 1px solid;
+        display: none;
+        flex-direction: column;
+
+        @media screen and (min-width: $bp-desktop) {
+            display: flex;
+        }
+
+        &__btn {
+            padding: 16px 24px;
+            border: none;
+            background-color: transparent;
+            text-align: left;
+
+            &[class~="is-selected"] {
+                background-color: $teal500;
+                color: $gray50;
+            }
+            &:focus {
+                box-shadow: 0 0 4px 1px $teal500;
+            }
+        }
+
+        &__dropdown {
+            position: relative;
+            select {
+                font-size: 16px;
+                line-height: 150%;
+                font-style: normal;
+                font-weight: 400;
+                padding: 12px;
+                border-radius: 4px;
+                border: 1px solid $gray300;
+                background: $gray50;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                width: 100%;
+            }
+            &:after {
+                content: '\f078';
+                font-size: 20px;
+                font-family: "Font Awesome 6 Pro";
+                font-weight: 900;
+                position: absolute;
+                right: 12px;
+                top: 10px;
+            }
+        }
+
+        &__mobile {
+            display: flex;
+            width: 100%;
+            flex-shrink: 0;
+            padding: 0;
+            @media screen and (min-width: $bp-desktop) {
+                display: none;
+            }
+            label {
+                font-size: 16px;
+                margin-bottom: 8px;
+            }
+        }
+    }
+
+    &__bottomCtas {
+        display: flex;
+        gap: 24px;
+        @media screen and (min-width: $bp-desktop) {
+            flex-direction: column;
+            padding: 24px;
+            gap: 16px;
+        }
+
+        span {
+            display: none;
+            @media screen and (min-width: $bp-desktop) {
+                display: inline-block;
+            }
+        }
+    }
+
+    &__outcomeTitle {
+        padding: 8px 24px;
+        margin: 0;
+        font-size: 16px;
+        font-weight: 600;
+       
+        color: $teal900;
+        button {
+            text-transform:capitalize;
+        }
+    }
+}
+
+@media print {
+    .myGuide {
+        display: none;
+    }
+}

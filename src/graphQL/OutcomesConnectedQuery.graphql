@@ -1,0 +1,116 @@
+query GetFnGOutcomes($datasource: String!, $language: String!){
+  outcomesUnderGuide: item(path: $datasource, language: $language) {
+    ... on Outcomes{
+          outcomes: children (includeTemplateIDs: ["{2820F9FD-BD20-4B49-A2D3-0016B00E0010}"], first:200)  { 
+          results{
+            ... on Outcome{
+              id
+              name
+              title {value}
+              actionSectionTitle{value}
+              definitionSectionTitle {value}
+              whySectionTitle {value}
+              howSectionTitle {value}
+              toolsAndCalculatorsSectionTitle {value}
+              guideCategory: field(name: "guideCategorization") {
+                      ... on LookupField {
+                        targetItem {
+                          ... on OutcomeType {
+                            id
+                            type: typeName {
+                              value
+                            }
+                          }
+                        }
+                      }
+              }
+              outcomeTexts: children (includeTemplateIDs: ["{C2A626B0-58F0-436C-98D3-445B57D13A45}"], first:200)  { 
+                results{
+                  ... on Text_c2a626b058f0436c98d3445b57d13a45{
+                    name,
+                    id,
+                    textContent: field(name:"text"){value}
+                    displayCondition:displayCondition{value}
+                    outcomeSectionType: field(name: "outcomeSection") {
+                      ... on LookupField {
+                        targetItem {
+                          ... on OutcomeSectionType {
+                            id
+                            typeName: typeName {
+                              value
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }  
+              }
+            }
+          }
+    	}
+    }
+  }
+
+  outcomesOutsideOfGuide: search(
+    where: {
+      AND: [
+        {
+          name: "_templates"
+          value: "{C2A626B0-58F0-436C-98D3-445B57D13A45}"
+          operator: EQ
+        }
+        {
+          name: "_path"
+          value: "{F510B2A4-4F9C-464D-B7F2-3F3E7FF44664}"
+          operator: NCONTAINS
+        }
+        { name: "displayCondition", value: "-start-", operator: CONTAINS }
+        { name: "relevantGuide", value: "*", operator: CONTAINS }
+      ]
+    }
+    # defaults to 10
+    first: 1250
+  ) {
+    results {
+      ... on Text_c2a626b058f0436c98d3445b57d13a45 {
+        name
+        id
+        textContent: field(name: "text") {
+          value
+        }
+        displayCondition: displayCondition {
+          value
+        }
+        relevantGuide {
+          value
+        }
+        outcomeSectionType: field(name: "outcomeSection") {
+          ... on LookupField {
+            targetItem {
+              ... on OutcomeSectionType {
+                id
+                typeName: typeName {
+                  value
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  ToolTipsforGuideCategorization: item(path: "{53A4545D-B8F4-48F0-9531-5ABCE64E4147}", language: "en")
+  {
+    tooltips: children (includeTemplateIDs: ["{07DEF4F0-7A1C-404E-AFA3-A0253D5EADE3}"])  {
+      results{
+              ... on OutcomeType {
+                  id
+                  typeName: typeName {value}
+                  tooltip:typeTooltip{value}
+              }
+            }  
+    	}             
+    }
+}

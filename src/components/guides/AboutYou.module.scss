@@ -1,0 +1,29 @@
+@import "@sass/variables";
+$widthMax: 750px;
+$gapValue: 40px;
+
+.contentWrapper {
+    max-width: $widthMax;
+    margin: 24px auto 0;
+    flex: 1 0 0;
+    gap: $gapValue;
+    display: flex;
+    flex-direction: column;
+    padding: 24px 16px;
+
+    @media screen and (min-width: $bp-desktop) {
+        padding: 0;
+        margin: 40px auto 0;
+    }
+}
+
+.bottomButtons {
+   display: flex;
+   padding-top: $gapValue;
+   justify-content: flex-end;
+   align-items: flex-end;
+   gap: 16px;
+   align-self: stretch;
+   margin-bottom: 96px;
+}
+

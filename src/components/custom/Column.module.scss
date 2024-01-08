@@ -1,0 +1,28 @@
+
+$widthMax: 1140px;
+$gapValue: 40px;
+
+.column {
+    position: relative;
+    //width: 50%;
+}
+
+.left {
+    
+    border: red 1px solid;
+    flex: 1 0 0;
+    gap: $gapValue;
+    display: flex;
+    flex-direction: column;
+}
+
+.right {
+    
+}
+
+.half{
+    composes: column;
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+}

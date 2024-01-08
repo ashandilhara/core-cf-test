@@ -1,0 +1,60 @@
+@import '@sass/colors';
+
+
+$primary-bg-color: #F9FAFB;
+$primary-border-color: $teal500;
+$primary-color: $teal500;
+
+$secondary-bg-color: $teal500;
+$secondary-border-color: $teal500;
+$secondary-color: white;
+
+$tertiary-color: $teal;
+
+$paddingVertical: 12px;
+$paddingHorizontal: 24px;
+$fontSize: 16px;
+$fontWeight: 700;
+
+.primary {
+   color: $primary-color;
+   background-color: $primary-bg-color;
+   border: $primary-border-color solid 1px;
+   padding: $paddingVertical $paddingHorizontal;
+   font-size: $fontSize;
+   font-weight: $fontWeight;
+   &:focus {
+      box-shadow: 0 0 4px 1px $teal500;
+   }
+}
+
+.secondary {
+   color: $secondary-color;
+   background-color: $secondary-bg-color;
+   border: $secondary-border-color solid 1px;
+   padding: $paddingVertical $paddingHorizontal;
+   font-size: $fontSize;
+   font-weight: $fontWeight;
+   &:focus {
+      box-shadow: 0 0 4px 1px $teal500;
+   }
+}
+
+.tertiary {
+   font-size: $fontSize;
+   color: $tertiary-color;
+   background: transparent;
+   border: none;
+   display: flex;
+   align-items: center;
+   padding: 0;
+   font-weight: 600;
+   gap: 8px;
+   &:focus {
+      box-shadow: 0 0 4px 1px $teal500;
+   }
+}
+
+.btnDisabled {
+   opacity: .3;
+}

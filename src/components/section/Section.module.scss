@@ -1,0 +1,31 @@
+$gap: 8px;
+$marginBottom: 32px;
+@import "@sass/variables";
+
+
+.section {
+
+    &__grid {
+        gap: $gap;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        @media screen and (min-width: $bp-desktop) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }    
+    }
+
+    &__tooltips {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__subtitle {
+        margin-top: $gap;
+        margin-bottom: $marginBottom;
+    }
+
+}
+
+

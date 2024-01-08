@@ -1,0 +1,19 @@
+// Size variables
+$ir-screen-sm-min: 414px !default;
+$ir-screen-md-min: 768px !default;
+$ir-screen-lg-min: 992px !default;
+$ir-screen-xl-min: 1140px !default;
+$ir-screen-xxl-min: 1440px !default;
+
+//width for breakpoints
+$width-x-large: 1360px;
+$width-large: 1110px;
+$width-small: 720px;
+$width-x-small: 345px;
+
+$bp-mobile-max: 364px;
+$bp-mobile: 365px;
+$bp-tablet-max: 767px;
+$bp-tablet: $ir-screen-md-min;
+$bp-desktop: $ir-screen-lg-min;
+$bp-desktop-xl: $ir-screen-xl-min;

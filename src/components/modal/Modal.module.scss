@@ -1,0 +1,54 @@
+@import "@sass/variables";
+$bgcolor: #F9FAFB;
+$gap: 16px;
+
+.modal {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 8px;
+
+    &__overlay {
+        width: 100%;
+        height: 100%;
+        left: 0;
+        background-color: #111827;
+        opacity: 0.5;
+        position: absolute;
+    }
+    &__contentBox {
+        border-radius: 8px;
+        width: 100%;
+        max-width: 548px;
+        background-color: $bgcolor;
+        z-index: 1;
+        padding: 24px;
+
+        @media screen and (min-width: $bp-desktop) {
+            padding: 40px 32px;
+        }
+    }
+
+    &__title {
+        margin-bottom: $gap;
+        font-weight: 500;
+    }
+
+    &__buttons {
+        display: flex;
+        margin-top: 32px;
+        justify-content: flex-end;
+        gap: $gap;
+
+        @media screen and (min-width: $bp-desktop) {
+            margin-top: 42px;
+        }
+    }
+}

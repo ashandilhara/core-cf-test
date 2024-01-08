@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="23.5" height="18" viewBox="0 0 23.5 18">
+    <defs>
+        <style>
+            .prefix__cls-1,.prefix__cls-4{fill:none}.prefix__cls-1,.prefix__cls-2{stroke:#37424a;stroke-width:2px}.prefix__cls-1{stroke-linecap:round}.prefix__cls-2{fill:#fff}.prefix__cls-3{stroke:none}
+        </style>
+    </defs>
+    <g id="prefix__filter-icon" transform="translate(1)">
+        <path id="prefix__Line_16" d="M0 0L21.5 0" class="prefix__cls-1" data-name="Line 16" transform="translate(0 4.011)"/>
+        <path id="prefix__Line_17" d="M0 0L21.5 0" class="prefix__cls-1" data-name="Line 17" transform="translate(0 13.84)"/>
+        <g id="prefix__Ellipse_1" class="prefix__cls-2" data-name="Ellipse 1" transform="translate(11)">
+            <circle cx="4" cy="4" r="4" class="prefix__cls-3"/>
+            <circle cx="4" cy="4" r="3" class="prefix__cls-4"/>
+        </g>
+        <g id="prefix__Ellipse_2" class="prefix__cls-2" data-name="Ellipse 2" transform="translate(3 10)">
+            <circle cx="4" cy="4" r="4" class="prefix__cls-3"/>
+            <circle cx="4" cy="4" r="3" class="prefix__cls-4"/>
+        </g>
+    </g>
+</svg>

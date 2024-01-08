@@ -1,0 +1,23 @@
+// @import "base";
+// @import "components";
+// @import "variants";
+// @import "app";
+
+
+
+//@import 'basic/fonts';
+//@import 'bootstrap/scss/bootstrap';
+// @import "sass/main.scss";
+// @import "basic/main.scss";
+
+@import 'fontawesome-pro/scss/fontawesome.scss';
+@import 'fontawesome-pro/scss/sharp-regular.scss';
+@import 'fontawesome-pro/scss/sharp-solid.scss';
+@import 'fontawesome-pro/scss/solid.scss';
+
+@import 'heading';
+
+//fix footer width on mobile 
+.footer-refresh__share-content {
+    flex-wrap: wrap;
+}

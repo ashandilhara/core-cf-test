@@ -1,0 +1,84 @@
+
+@import "@sass/variables";
+$paddingV: 16px;
+$paddingH: 24px;
+$paddingHMobile: 12px;
+$bgColor: #F9FAFB;
+$borderColor: #D2D5DA;
+$borderColorSelected: #0D8390;
+$iconColor: #4B5563;
+$iconsHighlightColor: #0D8390;
+$textColor: #111827;
+
+.label {
+    display: flex;
+    flex: 1;
+    margin-bottom: 0;
+    cursor: pointer;
+
+    input:checked ~ [class~="check-custom"] {
+        border: $borderColorSelected 1px solid;
+        [class~="check-custom__icon"] {
+            color: $iconsHighlightColor;
+        }
+    }
+
+    input:hover ~ [class~="check-custom"],
+    input:focus ~ [class~="check-custom"] {
+        border: $borderColorSelected 1px solid;
+    }
+}
+
+.block {
+    display: flex;
+    flex: 1;
+    padding: $paddingV $paddingHMobile ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $bgColor;
+    border: $borderColor 1px solid;
+    border-radius: 8px;
+    transition : border 200ms ease-out;
+    @media screen and (min-width: $bp-desktop) {
+        padding: $paddingV $paddingH ;
+    }
+
+}
+
+.name {
+    height: 48px;
+    display: flex;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    text-align: center;
+    color: $textColor;
+    
+}
+.icon {
+    height: 48px;
+    display: flex;
+    align-items: center;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 150%;
+    color: $iconColor;
+    transition : color 200ms;
+
+    @media screen and (min-width: $bp-desktop) {
+        height: 60px;
+        font-size: 40px;
+    }
+}
+
+.input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}

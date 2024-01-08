@@ -1,0 +1,46 @@
+$textColor: #2f3a49;
+$stolzl-font: stolzl, sans-serif;
+
+.h2,
+.heading2 {
+  font-family: $stolzl-font;
+  color: $textColor;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 43.2px */
+  margin: 0;
+}
+
+.h3,
+.heading3 {
+  font-family: $stolzl-font;
+  color: $textColor;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 43.2px */
+  margin: 0;
+}
+
+.h5,
+.heading5 {
+  font-family: $stolzl-font;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 28.8px */
+  color: $textColor;
+  margin: 0;
+}
+
+.h6,
+.heading6 {
+  font-family: $stolzl-font;
+  color: $textColor;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 24px */
+  margin: 0;
+}

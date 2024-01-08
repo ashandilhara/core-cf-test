@@ -1,0 +1,101 @@
+query GuideConnectedQuery($datasource: String!, $language: String!) {
+  datasource: item(path: $datasource, language: $language)  {
+    ... on Scenario{
+            id
+            name
+            title {value}
+            subtitle {value}
+            outcomeRootId: children (includeTemplateIDs: ["{F6F55CB2-A3A3-4BF3-A64E-D89C75E58FD7}"], first: 1)  {
+        		results{
+              id
+              } 
+            }
+            sections: children (includeTemplateIDs: ["{06524971-8BFF-4C25-B8F7-262F2ACC1D8F}"])  { 
+            results{
+              ... on SituationSection{
+                      id
+                      name
+                      title{value}
+                      subtitle{value}
+                      allowMultipleSelection {boolValue}
+                      isParentSection {boolValue}
+                      tiles: children (includeTemplateIDs: ["{6EEC9CE7-AD04-446C-A10D-E0783ADFF777}"]) {  
+                      results{
+                              ... on Tile{
+                                      id
+                                      name
+                                      title {value}
+                                      tileIcon: tileIcon{
+                                        jsonValue
+                                      }
+                                      tooltipTitle:toolTipTitle{value}
+                              				tooltipContent: toolTipContent{value}
+                                			tilecontent: tileContent {value}
+                                      relevantTags:relevantTags{
+                                        targetItems{
+                                          ... on RelevantTag{
+                                            id
+                                            name
+                                            tagname: tagName{value}      
+                                          }
+                                        }
+                                      }
+                                			relatedSections: children(includeTemplateIDs: ["{06524971-8BFF-4C25-B8F7-262F2ACC1D8F}"],first:100)
+                                      { 
+                                        results{
+                                          ... on SituationSection{
+                                              id
+                                              name
+                                              title{value}
+                                              subtitle{value}
+                                              allowMultipleSelection {boolValue}
+                                              isParentSection {boolValue}
+                                            	tiles: children (includeTemplateIDs: ["{6EEC9CE7-AD04-446C-A10D-E0783ADFF777}"], first:100) { 
+                                              results{
+                                                ...on Tile{
+                                                    id
+                                                    name
+                                                    title {value}
+                                                    tileIcon: tileIcon{
+                                                      jsonValue
+                                                    }
+                                                    tooltipTitle:toolTipTitle{value}
+                              				              tooltipContent: toolTipContent{value}
+                                			              tileContent: tileContent {value}
+                                                    relevantTags:relevantTags{
+                                                      targetItems{
+                                                        ... on RelevantTag{
+                                                          id
+                                                          name
+                                                          tagname: tagName{value}      
+                                                        }
+                                                      }
+                                                    }                      
+                                                  } 
+                                              }
+                                            }
+                                          }
+                                        }                  
+                                      }
+                                    }                               
+                          } 	  	
+                			} 
+                } 
+            }   	
+          }
+    }   
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,58 @@
+@import '@sass/colors';
+@import "@sass/variables";
+
+$maxWidth: 1140px;
+$titleColor: $teal;
+$gapValueLarge: 64px;
+$gapValue: 24px;
+
+
+.intro {
+  max-width: $maxWidth;
+  margin: 0 auto;
+}
+
+.mainImage {
+  position: relative;
+ width: 100%;
+  max-width: 100%;
+  @media screen and (min-width: $bp-desktop) {
+    width: 756px;
+  }
+}
+
+.introContent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0 16px;
+  &__title {
+    color: $titleColor;
+  }
+  &__beginBtn {
+    align-self: flex-start;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+
+  @media screen and (min-width: $bp-desktop) {
+    padding: 0;
+  }
+}
+
+.wrapper {  
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 0 64px 0;
+  align-items: flex-start;
+  gap: $gapValue;
+  flex: 1 0 0;
+
+  @media screen and (min-width: $bp-desktop) {
+    flex-direction: row;
+    padding: 48px 0 96px 0;
+    gap: $gapValueLarge;
+  }
+}

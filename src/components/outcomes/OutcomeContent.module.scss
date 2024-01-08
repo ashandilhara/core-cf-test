@@ -1,0 +1,64 @@
+@import "@sass/variables";
+@import "@sass/colors";
+$highlightTextColor: #0D8390;
+
+.outcomeContent {
+    background-color: white;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+
+
+    &[class~="is-hidden"] {
+        .outcomeContent__content {
+            height: 0;
+            padding-top: 0;
+        }
+    }
+
+    &__title {
+        margin-bottom: 24px;
+    }
+
+    &__btn {
+        border: none;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        text-align: left;
+        i {
+            font-size: 24px;
+            color: $highlightTextColor;
+        }
+        &:focus {
+            box-shadow: 0 0 4px 1px $teal500;
+        }
+    }
+
+    &__content {
+        height: auto;
+        overflow: hidden;
+        padding-left: 40px;
+        padding-top: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        transition: height 200ms ;
+    }
+
+    &__chevron {
+        margin-left: auto;
+        color: #111827 !important;
+        font-size: 20px;
+    }
+}
+
+@media print {
+    [class~="is-hidden"] {
+        .outcomeContent__content {
+            height: auto !important;
+        }
+    }
+}

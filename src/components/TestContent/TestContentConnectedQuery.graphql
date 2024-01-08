@@ -1,0 +1,10 @@
+query TestContentConnectedQuery($datasource: String!, $language: String!) {
+  datasource: item(path: $datasource, language: $language) {
+    id
+    name
+    displayName
+    ... on Text{
+      text{value}
+    }
+    }
+  }

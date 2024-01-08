@@ -1,0 +1,10 @@
+@import "@sass/colors";
+$bgColor: $gray200;
+
+.tag {
+    padding: 2px 12px;
+    background-color: $bgColor;
+    border-radius: 100px;
+    display: inline-block;
+    flex-shrink: 0;
+}
