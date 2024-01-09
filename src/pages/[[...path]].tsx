@@ -20,7 +20,7 @@ import { sitemapFetcher } from 'lib/sitemap-fetcher';
 
 import { MegaMenu } from '../../public/assets/js/megamenu';
 import initDropdownLink from '../../public/assets/js/dropdown-menu';
-
+export const runtime = 'edge';
 interface SitecorePageComponentsProps {
   header?: { htmlContent: string };
   footer?: { htmlContent: string };
