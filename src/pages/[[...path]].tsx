@@ -20,7 +20,7 @@ import { sitemapFetcher } from 'lib/sitemap-fetcher';
 
 import { MegaMenu } from '../../public/assets/js/megamenu';
 import initDropdownLink from '../../public/assets/js/dropdown-menu';
-
+export const runtime = 'edge';
 interface SitecorePageComponentsProps {
   header?: { htmlContent: string };
   footer?: { htmlContent: string };
@@ -123,7 +123,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
   const footerFilePath = path.join(process.cwd(), 'public', 'assets', 'footer.html');
   const footerHTML = fs.readFileSync(footerFilePath, 'utf-8');
   const footerData = { htmlContent: footerHTML };
-  
 
   return {
     props: {
